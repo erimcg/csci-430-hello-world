@@ -4,7 +4,7 @@ const app = express()
 const port = process.env.PORT || 3000 
 
 const path = require('path')
-const dir = path.join(__dirname, "../public")
+const dir = path.join(__dirname, "public")
 app.use(express.static(dir))
 
 app.get('', (req, res) => { 
