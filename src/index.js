@@ -12,10 +12,7 @@ app.get('', (req, res) => {
 }) 
 
 app.get('/about', (req, res) => {
-    res.render('about', {
-      title: 'Weather App',
-      name: 'Eric'
-    })
+    res.sendFile("/about.html")
   })
 
 app.listen(port, () => { 
