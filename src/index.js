@@ -4,15 +4,15 @@ const app = express()
 const port = process.env.PORT || 3000 
 
 const path = require('path')
-const dir = path.join(__dirname, "public")
-app.use(express.static('public'))
+const dir = path.join(__dirname, "../public")
+app.use(express.static(dir))
 
 app.get('', (req, res) => { 
     res.send('Hello Eric') 
 }) 
 
 app.get('/about', (req, res) => {
-    res.sendFile("/about.html")
+    res.sendFile("../public/about.html")
   })
 
 app.listen(port, () => { 
