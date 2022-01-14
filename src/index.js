@@ -12,8 +12,8 @@ app.get('', (req, res) => {
 }) 
 
 app.get('/about', (req, res) => {
-    //res.sendFile("../public/about.html")
-    res.send('Hello Test') 
+    res.sendFile(path.join(dir, "about.html"))
+    //res.send('Hello Test') 
   })
 
 app.listen(port, () => { 
